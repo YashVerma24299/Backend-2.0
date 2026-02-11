@@ -1,4 +1,5 @@
-import { log } from "console";
+// Build a CLI Todo App using node
+
 import readline from "readline";
 
 const rl = readline.createInterface({
@@ -23,18 +24,17 @@ const handleInput = (option) => {
       showMenu();
     });
   } else if (option == 2) {
-    console.log("\n Your Todo List");
-    todos.map((task,ind)=>{
-        console.log(`${ind+1}. ${task}`);
-        showMenu();
-    })
-  }
-  else if(option==3){
+    console.log("\nYour Todo List");
+    todos.map((task, ind) => {
+      console.log(`${ind + 1}. ${task}`);
+    });
+    showMenu();
+  } else if (option == 3) {
     console.log("Good Bye");
     rl.close();
-  }
-  else{
-    console.log("Invalid Option");
+  } else {
+    console.log("\nInvalid Option. Please try again!");
     showMenu();
   }
 };
+showMenu();

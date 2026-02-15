@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Query Form</title>
+  </head>
+  <body>
+    <div>
+      <h1>Send Query Params via Get (req.query)</h1>
+      <form action="/details" method="GET">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="userName" placeholder="Enter Name" />
+
+        <br /><br />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="userMessage"
+          placeholder="Enter Meassage"
+        ></textarea>
+
+        <br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div>
+      <h1>
+        Send Query Params via Post (app.use(express.urlencoded({extended: true})) + req.body)
+      </h1>
+      <form action="/details" method="post">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="userName" placeholder="Enter Name" />
+
+        <br /><br />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="userMessage"
+          placeholder="Enter Meassage"
+        ></textarea>
+
+        <br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>

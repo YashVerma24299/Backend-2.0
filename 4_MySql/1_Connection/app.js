@@ -6,7 +6,7 @@ const db= await mysql.createConnection({
     password:"root",  // if password is wrong, then app will crashes
     database:"mysql_dbb",
 })
-// run command: nodemon app.js
+// run command: nodemon app.js 
 console.log("MySql Connected Successfully");
 
 
